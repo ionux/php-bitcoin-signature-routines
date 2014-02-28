@@ -9,7 +9,7 @@ Ubuntu: http://packages.ubuntu.com/search?keywords=php5-gmp<br />
 Debian: https://packages.debian.org/search?keywords=php5-gmp<br />
 Red Hat: http://rpmfind.net/linux/rpm2html/search.php?query=gmp.so<br />
 CentOS (5.2): http://lists.centos.org/pipermail/centos/2010-November/101183.html<br />
-Slackware: http://search.slackware.eu/cgi-bin/package.cgi/inspect/slackware-14.0/slackware/l/gmp-5.0.5-i486-1.txz</br >
+Slackware: http://search.slackware.eu/cgi-bin/package.cgi/inspect/slackware-14.0/slackware/l/gmp-5.0.5-i486-1.txz<br />
 Source: https://gmplib.org/#DOWNLOAD<br />
 
 Other libraries may be required, so consult the official GMP documentation if you have questions regarding dependencies.

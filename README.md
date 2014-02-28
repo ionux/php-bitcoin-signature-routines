@@ -1,5 +1,5 @@
 PHP bitcoin signature routines
-
+-------------------------------
 PHP routines for verifying Bitcoin signatures.  Requires PHP 5.3.2 and the extension GMP 4.2.0 or better. GMP may be available in a package called "php5-gmp" or similar for your system.
 
 

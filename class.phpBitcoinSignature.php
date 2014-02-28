@@ -1,12 +1,45 @@
 <?php
-// PHP 5.3.2 and GMP 4.2.0 (for larger base conversions), or higher, required
+
+/**********************************
+ * 
+ * This is a collection of PHP routines for verifying Bitcoin signatures.
+ * It requires PHP 5.3.2 and the extension GMP 4.2.0 or better. GMP may
+ * be available in a package called "php5-gmp" or similar for your system
+ * (see the Packages section in the README.md file) or can be compiled
+ * from source and PHP configured with the --with-gmp option, if it's not
+ * already configured for it.
+ * 
+ * Requires: PHP 5.3.2+ and GMP 4.2.0+ (for larger base conversions)
+ * 
+ * 
+ * Original code (c) 2013, Joey Hewitt
+ * Modifications (c) 2014, Rich Morgan
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ * 
+ **********************************/
+
 
 // Configure the ECC lib
 if (extension_loaded('gmp')) {
 	define('USE_EXT', 'GMP');
 } else {
-	// It may be available in a package called "php5-gmp" or similar for your system.
-	// See the README.md file for more information.
 	die('GMP extension required. Please check the README.md file for more information.');
 }
 
